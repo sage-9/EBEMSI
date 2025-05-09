@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      tortise table_0: 2182169036003926136
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

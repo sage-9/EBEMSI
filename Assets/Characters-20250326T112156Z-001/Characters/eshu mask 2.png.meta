@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      eshu mask 2_0: 7972730982134308732
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
