@@ -1,78 +1,78 @@
 using UnityEngine;
 using System.Collections;
 using TMPro;
-using System.Collections.Generic;
+
 
 public class Dialogue : MonoBehaviour
 {
-    public GameObject dialoguePanel;
     public TextMeshProUGUI textComponent;
-    public string[] sentences;
+    [SerializeField]
+    private DialogueContainer dialogueContainer;
+    
     public float textSpeed;
-    private int index;
-    private Animator dialogueAnimator;
-    private bool startDialogue = true;
+    private int _index;
+    string _currentSentence;
+    [SerializeField]
+    float delay=1f;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private Animator _dialogueAnimator;
+    
+    
     void Start()
     {
-        dialogueAnimator = GetComponent<Animator>();
+        _dialogueAnimator = GetComponent<Animator>();
         textComponent.text = string.Empty;
+        _index = 0;
+        ShowDialoguePanel();
+    }
+    
+    // --------------show panel --------------
+    
+    void ShowDialoguePanel()
+    {
+        _dialogueAnimator.SetTrigger("Enter");
+        while(delay<=0) delay-=Time.deltaTime;
         StartDialogue();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if(Input.GetMouseButtonDown(0))
-        {
-            if (startDialogue)
-            {
-                dialogueAnimator.SetTrigger("Enter");
-                startDialogue = false;
-            }
-            else
-            {
-                NextSentence();
-            }
-        }
-    }
-
+    
+    // --------------start dialogue--------------
     void StartDialogue()
     {
-        index = 0;
-
-        StartCoroutine(ShowDialogueSequence());
-        
+        DialogueSequence(_index);
     }
-
-    void NextSentence()
+    
+    // --------------keep picking the next item in the dialogue list--------------
+    
+    void DialogueSequence(int index)
     {
-        if (index <= sentences.Length - 1)
-        {
-            textComponent.text = string.Empty;
-            StartCoroutine(TypeLine());
-        }
-        else
-        {
-            textComponent.text = string.Empty;
-            dialogueAnimator.SetTrigger("Exit");
-            
-        }
-    }
-
-    IEnumerator ShowDialogueSequence()
+        //get text in current list index
+        _currentSentence=dialogueContainer.sentences[index];
+        //type line
+        StartCoroutine(TypeLine(_currentSentence));
+    } 
+    
+    IEnumerator TypeLine(string sentence,float initialDelay=0.2f)
     {
-        yield return new WaitForSeconds(2f);
-        yield return StartCoroutine(TypeLine());
+         yield return new WaitForSeconds(initialDelay);
+         foreach (char letter in sentence)
+         {
+             textComponent.text += letter;
+             yield return new WaitForSeconds(textSpeed);
+         }
     }
-    IEnumerator TypeLine()
+    
+    public void NextInput()
     {
-        foreach(char letter in sentences[index].ToCharArray())
-        {
-            textComponent.text += letter;
-            yield return new WaitForSeconds(textSpeed);
-        }
-        index++;
+        _index++;
+        if (_index >= dialogueContainer.sentences.Length) HidePanel();
+        else DialogueSequence(_index);
+        textComponent.text = string.Empty;
     }
+    
+    //--------------hide panel--------------
+    
+    void HidePanel()
+            {
+                _dialogueAnimator.SetTrigger("Exit");
+            }
 }

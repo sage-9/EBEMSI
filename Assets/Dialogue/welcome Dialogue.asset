@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eec108c19e8ef8f40bd5ac46b989bec6, type: 3}
+  m_Name: welcome Dialogue
+  m_EditorClassIdentifier: 
+  sentences:
+  - Hi
+  - 'Welcome, your adventure through time begins now. '
+  - Solve intricate puzzles, uncover forgotten history and restore the pieces of
+    the past.
+  npc: {fileID: -3757777646499455162, guid: bbfeee35b35be694eaebe8ce61bd26bd, type: 3}
