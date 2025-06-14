@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Wall baseboard with corner_0: 153535106508188156
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

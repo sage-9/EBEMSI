@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      cased stool_0: -1011522211146263653
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
