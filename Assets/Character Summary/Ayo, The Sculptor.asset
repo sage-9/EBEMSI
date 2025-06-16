@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8614d912c30c7fb4ab38c8fc17c044cb, type: 3}
+  m_Name: Ayo, The Sculptor
+  m_EditorClassIdentifier: 
+  characterIcon: {fileID: 4613777310621106568, guid: 80e6ac461771fcb4082c7d2b00d2cf6a, type: 3}
+  characterName: Ayo,the sculptor
+  characterBackGround: 'A master artisan known for his keen eye and steady hands. '
+  characterAbilities:
+  - '+Bonus on visual-based challenges (puzzle solving, artifact arrangement) '
+  - 'Reduced penalty for failed assembling tasks '
+  characterSignatureTool: ' A sculpting tool passed down through generations. '

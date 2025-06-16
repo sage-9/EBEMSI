@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8614d912c30c7fb4ab38c8fc17c044cb, type: 3}
+  m_Name: Tunde, The Storyteller
+  m_EditorClassIdentifier: 
+  characterIcon: {fileID: 1845944086403086193, guid: 2bb323936c360144881ba5eaa1c400e5, type: 3}
+  characterName: Tunde, The Storyteller
+  characterBackGround: A wandering griot who preserves wisdom through oral tradition.
+  characterAbilities:
+  - 'Provides hints during complex puzzles '
+  - 'Gains extra points from trivia-based knowledge boosts '
+  characterSignatureTool: A carved wooden staff with hidden inscriptions

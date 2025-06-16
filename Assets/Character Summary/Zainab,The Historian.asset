@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8614d912c30c7fb4ab38c8fc17c044cb, type: 3}
+  m_Name: Zainab,The Historian
+  m_EditorClassIdentifier: 
+  characterIcon: {fileID: 7972730982134308732, guid: a69cd36442d94b24985c49145feca5b2, type: 3}
+  characterName: Zainab, The Historian
+  characterBackGround: 'A storyteller and keeper of history, with deep knowledge
+    of past civilizations. '
+  characterAbilities:
+  - '+Bonus on trivia challenges and historical-based tasks '
+  - 'Unlocks additional lore when interacting with NPCs '
+  characterSignatureTool: ' A leather-bound book containing ancient knowledge.'
